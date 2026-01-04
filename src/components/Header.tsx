@@ -11,7 +11,7 @@ export function Header() {
       >
         tasteshelf.com
       </p>
-      <p>0 product indexed</p>
+      <p>0 products indexed</p>
     </div>
   );
 }

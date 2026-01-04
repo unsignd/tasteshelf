@@ -32,35 +32,51 @@ export function Product() {
               interface.
             </p>
           </div>
-          <div className="w-[360px] max-h-[280px] px-5 flex flex-col bg-white border border-black no-scrollbar overflow-y-auto">
-            <div className="sticky top-0 py-5">
-              <p>get it now</p>
-            </div>
-            <div className="w-full pb-5 flex flex-col">
-              {retailList.map((_, index) => (
-                <div
-                  className="w-full py-5 flex items-center justify-between gap-5 shrink-0 group cursor-pointer"
-                  key={index}
-                >
-                  <div className="min-w-0 flex flex-col gap-2 flex-1">
-                    <div className="flex items-center gap-[6px]">
-                      {/* temp */}
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qAKcxM410O8K7y5UZy8VQ7JQaBZsm8uZRA&s"
-                        className="w-[16px] h-[16px] rounded-full"
-                        alt="Retail Store Logo"
-                      />
-                      <small className="text-ellipsis overflow-hidden whitespace-nowrap">
-                        Company
-                      </small>
+          <div className="flex flex-col gap-5">
+            <div className="w-[360px] max-h-[280px] px-5 flex flex-col bg-white border border-black no-scrollbar overflow-y-auto">
+              <div className="sticky top-0 py-5">
+                <p>get it now</p>
+              </div>
+              <div className="w-full pb-5 flex flex-col">
+                {retailList.map((_, index) => (
+                  <div
+                    className="w-full py-5 flex items-center justify-between gap-5 shrink-0 group cursor-pointer"
+                    key={index}
+                  >
+                    <div className="min-w-0 flex flex-col gap-2 flex-1">
+                      <div className="flex items-center gap-[6px]">
+                        {/* temp */}
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qAKcxM410O8K7y5UZy8VQ7JQaBZsm8uZRA&s"
+                          className="w-[16px] h-[16px] rounded-full"
+                          alt="Retail Store Logo"
+                        />
+                        <small className="text-ellipsis overflow-hidden whitespace-nowrap">
+                          Company
+                        </small>
+                      </div>
+                      <p className="text-ellipsis overflow-hidden whitespace-nowrap group-hover:underline">
+                        Retail Product
+                      </p>
                     </div>
-                    <p className="text-ellipsis overflow-hidden whitespace-nowrap group-hover:underline">
-                      Retail Product
-                    </p>
+                    <p className="shrink-0">CA$3.99</p>
                   </div>
-                  <p className="shrink-0">CA$3.99</p>
+                ))}
+              </div>
+            </div>
+            <div className="w-[360px] max-h-[280px] p-5 flex flex-col bg-white border border-black no-scrollbar overflow-y-auto">
+              <div className="w-full flex flex-col">
+                <div className="w-full h-10 flex items-center justify-between">
+                  <p>release date</p>
+                  <p>01-01-2000</p>
                 </div>
-              ))}
+                <div className="w-full h-10 flex items-center justify-between">
+                  <p>
+                    user score<span className="footnote">1</span>
+                  </p>
+                  <p>100</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -72,7 +88,7 @@ export function Product() {
           />
         </div>
       </div>
-      <div className="w-full pt-20 flex flex-col gap-60">
+      <div className="w-full flex flex-col gap-40">
         <div className="flex flex-col">
           <div className="flex justify-center">
             <div className="w-[1560px] max-w-[calc(100%_-_160px)] h-20 flex items-center justify-between">

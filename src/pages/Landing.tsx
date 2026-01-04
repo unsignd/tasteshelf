@@ -23,7 +23,7 @@ export function Landing() {
           />
         ))}
       </div>
-      <div className="w-full pt-20 flex flex-col gap-60">
+      <div className="w-full flex flex-col gap-40">
         <div className="flex flex-col">
           <div className="flex justify-center">
             <div className="w-[1560px] max-w-[calc(100%_-_160px)] h-20 flex items-center justify-between">

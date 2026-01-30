@@ -8,7 +8,7 @@ export function Landing() {
 
   useEffect(() => {
     setFeaturedList([0, 0, 0, 0, 0, 0, 0, 0]);
-    setHighlyRatedList([0, 0, 0, 0]);
+    setHighlyRatedList([0, 0, 0, 0, 0, 0, 0, 0]);
   }, []);
 
   return (
@@ -23,6 +23,7 @@ export function Landing() {
           />
         ))}
       </div>
+
       <div className="w-full flex flex-col gap-40">
         <div className="flex flex-col">
           <div className="flex justify-center">
@@ -31,12 +32,13 @@ export function Landing() {
               <p className="hover:underline cursor-pointer">view all</p>
             </div>
           </div>
-          <div className="px-[max(80px_,_calc((100%_-_1560px)_/_2))] flex gap-10 no-scrollbar overflow-x-auto">
+          <div className="px-[max(80px_,_calc((100%_-_1560px)_/_2))] grid grid-rows-2 grid-flow-col gap-x-10 no-scrollbar overflow-x-auto">
             {highlyRatedList.map((_, index) => (
-              <ProductCard key={index} />
+              <ProductCard key={index} firstRow={index % 2 === 0} />
             ))}
           </div>
         </div>
+
         <div className="flex flex-col">
           <div className="flex justify-center">
             <div className="w-[1560px] max-w-[calc(100%_-_160px)] h-20 flex items-center justify-between">
@@ -44,9 +46,9 @@ export function Landing() {
               <p className="hover:underline cursor-pointer">view all</p>
             </div>
           </div>
-          <div className="px-[max(80px_,_calc((100%_-_1560px)_/_2))] flex gap-10 no-scrollbar overflow-x-auto">
+          <div className="px-[max(80px_,_calc((100%_-_1560px)_/_2))] grid grid-rows-2 grid-flow-col gap-x-10 no-scrollbar overflow-x-auto">
             {highlyRatedList.map((_, index) => (
-              <ProductCard key={index} />
+              <ProductCard key={index} firstRow={index % 2 === 0} />
             ))}
           </div>
         </div>

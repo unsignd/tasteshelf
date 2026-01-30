@@ -16,7 +16,7 @@ export function Product() {
       <div className="w-full h-screen px-10">
         <div className="w-[calc(100%_-_80px)] h-full absolute flex items-center justify-between">
           <div className="w-[360px] flex flex-col gap-5">
-            <div className="overflow-hidden flex flex-col gap-[4px]">
+            <div className="overflow-hidden flex flex-col gap-1">
               <small className="block text-ellipsis overflow-hidden whitespace-nowrap">
                 Company
               </small>
@@ -44,11 +44,11 @@ export function Product() {
                     key={index}
                   >
                     <div className="min-w-0 flex flex-col gap-2 flex-1">
-                      <div className="flex items-center gap-[6px]">
+                      <div className="flex items-center gap-1.5">
                         {/* temp */}
                         <img
                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qAKcxM410O8K7y5UZy8VQ7JQaBZsm8uZRA&s"
-                          className="w-[16px] h-[16px] rounded-full"
+                          className="w-4 h-4 rounded-full"
                           alt="Retail Store Logo"
                         />
                         <small className="text-ellipsis overflow-hidden whitespace-nowrap">
@@ -74,7 +74,7 @@ export function Product() {
                   <p>
                     user score<span className="footnote">1</span>
                   </p>
-                  <p>100</p>
+                  <p>93</p>
                 </div>
               </div>
             </div>
@@ -96,9 +96,9 @@ export function Product() {
               <p className="hover:underline cursor-pointer">view all</p>
             </div>
           </div>
-          <div className="px-[max(80px_,_calc((100%_-_1560px)_/_2))] flex gap-10 no-scrollbar overflow-x-auto">
+          <div className="px-[max(80px_,_calc((100%_-_1560px)_/_2))] grid grid-rows-1 grid-flow-col gap-x-10 no-scrollbar overflow-x-auto">
             {featuredList.map((_, index) => (
-              <ProductCard key={index} />
+              <ProductCard key={index} firstRow />
             ))}
           </div>
         </div>
